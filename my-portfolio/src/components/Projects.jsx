@@ -1,52 +1,67 @@
-import fastfeast from '../assets/fastfeast.png'
-import primeeats from '../assets/primeeats.png'
-import Techium from '../assets/Techium.png'
+import Primeeats from "../assets/primeeats.png";
+import Techium from "../assets/Techium.png";
+import FastFeast from "../assets/fastfeast.png";
+import { ArrowDown } from "lucide-react"
 
 export default function Projects() {
-    return (
-        <div className="text-gray-600 body-font">
-            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-                        FatsFeast
-                    </h1>
-                </div>
-                <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                    <img
-                        className="object-cover object-center rounded"
-                        alt="hero"
-                        src={fastfeast}
-                    />
-                </div>
+  return (
+    <div>
+      <section id="projects" className="container mx-auto px-6 py-20">
+        <h2 className="text-5xl lg:text-6xl font-light mb-16">My projects</h2>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="space-y-4">
+            <div className="bg-gray-100 rounded-lg overflow-hidden">
+              <img
+                src={Primeeats}
+                alt="Branding for Tost"
+                width={300}
+                height={400}
+                className="w-lg h-[50%] object-cover rounded-lg"
+              />
             </div>
-            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                    <img
-                        className="object-cover object-center rounded"
-                        alt="hero"
-                        src={primeeats}
-                    />
-                </div>
-                <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                    <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-                        PrimeEats
-                    </h1>
-                </div>
+            <div className="flex items-center gap-2 text-sm">
+              <ArrowDown className="w-4 h-4" />
+              <span>
+                UI for PrimeEats – an international food delivery web app
+              </span>
             </div>
-            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-                        Techium
-                    </h1>
-                </div>
-                <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                    <img
-                        className="object-cover object-center rounded"
-                        alt="hero"
-                        src={Techium}
-                    />
-                </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="bg-gray-100 rounded-lg overflow-hidden">
+              <img
+                src={Techium}
+                alt="Poster for La Biso"
+                width={300}
+                height={400}
+                className="w-full h-[50%] object-cover"
+              />
             </div>
+            <div className="flex items-center gap-2 text-sm">
+              <ArrowDown className="w-4 h-4" />
+              <span>Landing page for Techium – HTML/CSS design project</span>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <div className="bg-gray-100 rounded-lg overflow-hidden">
+              <img
+                src={FastFeast}
+                alt="Poster for Des Lunas Film Society"
+                width={300}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex items-center gap-2 text-sm">
+              <ArrowDown className="w-4 h-4" />
+              <span>
+                FastFeast – modern food ordering frontend built with React
+              </span>
+            </div>
+          </div>
         </div>
-    )
+      </section>
+    </div>
+  );
 }

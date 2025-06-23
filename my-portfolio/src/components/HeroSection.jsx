@@ -1,45 +1,40 @@
-import logo from '../assets/logo.png'
+import Logo from "../assets/logo.png";
+import { ArrowDown } from "lucide-react"
 
 export default function HeroSection() {
-    return (
-        <div>
-            <section className="text-gray-600 body-font">
-                <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-                            Hi there!, I'm Bouzagui
-                            <br className="hidden lg:inline-block" />I love building amazing
-                            apps.
-                        </h1>
-                        <p className="mb-8 leading-relaxed">
-                            I'm a software developer with a passion for creating innovative
-                            solutions that make a difference. With expertise in various
-                            technologies, I bring a unique perspective to every project.
-                        </p>
-                        <div className="flex justify-center">
-                            <a
-                                href="#contact"
-                                className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">
-                                Contact Me
-                            </a>
-                            <a
-                                href='/assets/Resume.pdf'
-                                download
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                                Resume
-                            </a>
-                        </div>
-                    </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <img
-                            className="object-cover object-center rounded-full"
-                            alt="hero"
-                            src={logo}                        />
-                    </div>
-                </div>
-            </section>
+  return (
+    <div>
+      <section id="hero" className="container mx-auto px-6 py-20 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-5xl lg:text-7xl font-light leading-tight mb-8">
+              Welcome to
+              <br />
+              My Frontend
+              <br />
+              Portfolio
+            </h1>
+            <div className="inline-flex items-center px-6 py-3 border border-gray-300 rounded-full text-sm">
+              Badr Bouzagui / Frontend Developer
+            </div>
+          </div>
+          <div className="relative">
+            <div className="w-80 h-96 bg-amber-100 rounded-br-[300px] rounded-e-[300px] overflow-hidden mx-auto">
+              <img
+                src={Logo}
+                alt="Chad Gibbons"
+                width={320}
+                height={400}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute bottom-8 right-8 flex items-center gap-2 text-sm">
+              <ArrowDown className="w-4 h-4" />
+              Work with me today
+            </div>
+          </div>
         </div>
-    );
+      </section>
+    </div>
+  );
 }
